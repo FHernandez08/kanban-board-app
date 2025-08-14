@@ -1,0 +1,33 @@
+<form action="/add-task-form" method="post">
+    <h3>Create new task</h3>
+    <p>
+        Enter the following details to add the task onto the Kanban Board.
+        <br>
+        It will be requested under the requested column, but can be placed anywhere else afterwards.
+    </p>
+
+    <section id="name-form">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name-input" required>
+    </section>
+
+    <section id="title-form">
+        <label for="task-title">Title:</label>
+        <input type="text" name="task-title" id="task-title" required>
+    </section>
+
+    <section id="urgency-form">
+        <label for="importance">Choose the urgency of the task:</label>
+        <select name="importance" id="task-importance">
+            <option value="default" selected disabled hidden>Choose an option...</option>
+            <option value="critical">Critical</option>
+            <option value="to-be-solved-24h">To Be Solved 24H</option>
+            <option value="to-be-solved-48h">To Be Solved 48H</option>
+        </select>
+    </section>
+
+    <section id="form-buttons">
+        <button type="reset" id="cancel-form">Cancel</button>
+        <button type="submit" id="submit">Submit</button>
+    </section>
+</form>

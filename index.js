@@ -19,6 +19,6 @@ app.get("/", (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log(`The app is listening on port ${port}!`);
-    console.log(`To access the website, go to http://localhost:${port}`);
+    console.log(`The app is listening on port ${PORT}!`);
+    console.log(`To access the website, go to http://localhost:${PORT}`);
 })

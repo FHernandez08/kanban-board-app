@@ -1,8 +1,94 @@
 body {
-    
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
 }
+
 
 .hidden {
     display: none;
 }
 
+/* Grid shell */
+.board {
+  /* 1 label column + 5 status columns */
+  display: grid;
+  grid-template-columns: 200px repeat(5, minmax(220px, 1fr));
+  grid-auto-rows: minmax(120px, auto);
+  column-gap: 12px;
+  row-gap: 12px;
+
+  /* Make the board vertically scrollable if content overflows */
+  /* (Optional) set a max-height on a parent container if needed */
+}
+
+/* Header row */
+.grid-spacer {
+  /* Empty cell to align headers over the 5 status columns */
+}
+
+.board-header {
+  position: sticky;       /* stays visible when scrolling vertically */
+  top: 0;
+  z-index: 2;             /* above cards */
+  background: #ffffff;
+  border-bottom: 1px solid #E5E7EB;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.board-header h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.board-header .count {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* Band label column (left-most cell of each band row) */
+.band-label {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* Cells (the 5 per band where cards will stack) */
+.board-cell {
+  min-height: 140px;
+  border: 1px dashed #CBD5E1;     /* faint boundary while scaffolding */
+  border-radius: 10px;
+  padding: 8px;
+  background: #F8FAFC;            /* light surface difference */
+  overflow: hidden;
+}
+
+/* Row tints (applied to label + each of its 5 cells) */
+.band--critical {
+  background: rgba(220, 38, 38, 0.06); /* subtle red */
+}
+
+.band--24h {
+  background: rgba(234, 88, 12, 0.06); /* subtle orange */
+}
+
+.band--48h {
+  background: rgba(22, 163, 74, 0.06); /* subtle green */
+}
+
+/* Optional: visual rhythm for empty cells */
+.board-cell::before {
+  content: "No items yet";
+  font-size: 0.8rem;
+  color: #94A3B8;
+}
+
+/* Basic typography reset (optional) */
+#main-content {
+  padding: 16px;
+}

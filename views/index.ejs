@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="/assets/index.css">
     <link rel="stylesheet" href="/assets/header.css">
     <link rel="stylesheet" href="/assets/footer.css">
+
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
 </head>
 <body>
     <body>
@@ -19,7 +25,58 @@
     </div>
 
     <div id="main-content">
-        
+        <div class="board">
+    
+            <!-- Header row: left spacer + 5 column headers -->
+            <div class="grid-spacer" aria-hidden="true"></div>
+    
+            <div class="board-header" data-status="requested">
+                <h3>Requested</h3><span class="count">0</span>
+            </div>
+            <div class="board-header" data-status="working">
+                <h3>Working On</h3><span class="count">0</span>
+            </div>
+            <div class="board-header" data-status="rnd">
+                <h3>Tracking on RND</h3><span class="count">0</span>
+            </div>
+            <div class="board-header" data-status="waiting">
+                <h3>Waiting on Customer</h3><span class="count">0</span>
+            </div>
+            <div class="board-header" data-status="fixed">
+                <h3>Issue Fixed</h3><span class="count">0</span>
+            </div>
+    
+            <!-- Band row: CRITICAL -->
+            <div class="band-label band--critical">
+                <p>Critical</p>
+            </div>
+            <div class="board-cell band--critical" data-status="requested" data-sla="critical"></div>
+            <div class="board-cell band--critical" data-status="working" data-sla="critical"></div>
+            <div class="board-cell band--critical" data-status="rnd" data-sla="critical"></div>
+            <div class="board-cell band--critical" data-status="waiting" data-sla="critical"></div>
+            <div class="board-cell band--critical" data-status="fixed" data-sla="critical"></div>
+    
+            <!-- Band row: 24H -->
+            <div class="band-label band--24h">
+                <p>To Be Solved 24H</p>
+            </div>
+            <div class="board-cell band--24h" data-status="requested" data-sla="24h"></div>
+            <div class="board-cell band--24h" data-status="working" data-sla="24h"></div>
+            <div class="board-cell band--24h" data-status="rnd" data-sla="24h"></div>
+            <div class="board-cell band--24h" data-status="waiting" data-sla="24h"></div>
+            <div class="board-cell band--24h" data-status="fixed" data-sla="24h"></div>
+    
+            <!-- Band row: 48H -->
+            <div class="band-label band--48h">
+                <p>To Be Solved 48H</p>
+            </div>
+            <div class="board-cell band--48h" data-status="requested" data-sla="48h"></div>
+            <div class="board-cell band--48h" data-status="working" data-sla="48h"></div>
+            <div class="board-cell band--48h" data-status="rnd" data-sla="48h"></div>
+            <div class="board-cell band--48h" data-status="waiting" data-sla="48h"></div>
+            <div class="board-cell band--48h" data-status="fixed" data-sla="48h"></div>
+    
+        </div>
     </div>
 
     <footer>

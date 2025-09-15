@@ -10,15 +10,12 @@ body {
 
 /* Grid shell */
 .board {
-  /* 1 label column + 5 status columns */
   display: grid;
   grid-template-columns: 200px repeat(5, minmax(220px, 1fr));
   grid-auto-rows: minmax(120px, auto);
   column-gap: 12px;
   row-gap: 12px;
 
-  /* Make the board vertically scrollable if content overflows */
-  /* (Optional) set a max-height on a parent container if needed */
 }
 
 /* Header row */
@@ -27,9 +24,9 @@ body {
 }
 
 .board-header {
-  position: sticky;       /* stays visible when scrolling vertically */
+  position: sticky;
   top: 0;
-  z-index: 2;             /* above cards */
+  z-index: 2;
   background: #ffffff;
   border-bottom: 1px solid #E5E7EB;
   padding: 10px 12px;
@@ -61,10 +58,10 @@ body {
 /* Cells (the 5 per band where cards will stack) */
 .board-cell {
   min-height: 140px;
-  border: 1px dashed #CBD5E1;     /* faint boundary while scaffolding */
+  border: 1px dashed #CBD5E1;
   border-radius: 10px;
   padding: 8px;
-  background: #F8FAFC;            /* light surface difference */
+  background: #F8FAFC;
   overflow: hidden;
 }
 
@@ -91,4 +88,15 @@ body {
 /* Basic typography reset (optional) */
 #main-content {
   padding: 16px;
+}
+
+#card {
+    width: 200px;
+    height: 150px;
+    background-color: lightblue;
+    border: 2px solid darkblue;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box; 
+    border-radius: 10px;
 }

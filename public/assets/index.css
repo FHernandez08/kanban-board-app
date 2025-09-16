@@ -101,3 +101,15 @@ body {
     border-radius: 10px;
     text-align: center;
 }
+
+.drag-preview {
+  width: 200px;   /* optional: match your card’s width */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border-radius: 6px;
+  transform: translate(-50%, -50%); /* center under pointer */
+}
+
+.drop-hover {
+  outline: 2px dashed #007bff; /* or a subtle border */
+  background-color: rgba(0, 123, 255, 0.1); /* light tint */
+}

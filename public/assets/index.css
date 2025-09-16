@@ -63,6 +63,10 @@ body {
   padding: 8px;
   background: #F8FAFC;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 /* Row tints (applied to label + each of its 5 cells) */
@@ -103,13 +107,22 @@ body {
 }
 
 .drag-preview {
-  width: 200px;   /* optional: match your card’s width */
+  width: 200px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   border-radius: 6px;
-  transform: translate(-50%, -50%); /* center under pointer */
+  transform: translate(-50%, -50%);
+
+  position: fixed;
+  pointer-events: none;
+  opacity: 0.7;
+  z-index: 1000;
 }
 
 .drop-hover {
-  outline: 2px dashed #007bff; /* or a subtle border */
-  background-color: rgba(0, 123, 255, 0.1); /* light tint */
+  outline: 2px dashed #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.card {
+  position: relative;
 }
